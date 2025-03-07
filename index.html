@@ -1,17 +1,76 @@
 <!DOCTYPE>
 <html>
 	<head>
-		<title>Index</title>
-		<meta name="author" content="Raditya">
+		<title>HTML FORMS</title>
+		<meta name='author' content='Raditya'>
 	</head>
-	
 	<body>
-		<h1>HOME</h1>
-		<p>Selamat Datang Di Website Biodata Diri<br>Silahkan Pilih Menu Yang Telah disediakan</p>
-		<br>
-		<a href="E:\M. RADITYA ALDRI SEMESTER 2\WEB\biodata diri\biodata.html" target="_blank">Data diri Abang ||</a>
-		<a href="E:\M. RADITYA ALDRI SEMESTER 2\WEB\biodata diri\contact.html" target="_blank"> Sosmed Abang Dek</a>
-		<br>
-		<p>Kalau adek berminat hubungi abang ya dek</p>
+		<h2>HTML</h2>
+		<form action ="" method ="get">
+			<fieldset><!--fieldset digunakan untuk memberikan border pada inputan formulir yang dibuat--> 
+			<legend>FORMULIR DATA MAHASISWA</legend><!--legend diguakan untuk memberikan sub judul formulir-->
+			<table>
+				<tr>
+					<td><label>NAMA</label></td>
+					<td>: <input type = "text" name="nama" required></td><!--type text digunakan untuk input text huruf dan angka-->
+			<!--required digunakan agar inputan wajib diisi oleh user-->
+				</tr>
+				<tr>
+					<td width="20%"><label>NIM</label></td>
+					<td>: <input type = "number" name="nim"></td><!--type number digunakan untuk input angka-->
+				</tr>
+				<tr>
+					<td><label>PASSWORD</label></td>
+					<td>: <input type = "password" name="password"></td><!--type password digunakan untuk input password-->
+				</tr>
+				<tr>
+					<td><label>EMAIL</label></td>
+					<td>: <input type = "email" name="email"></td><!--type email digunakan untuk input email-->
+				</tr>
+				<tr>
+					<td><label>TANGGAL LAHIR</label></td>
+					<td>: <input type = "date" name="tanggal-lahir"></td><!--type date digunakan untuk input tanggal namun kurang direkomendasikan untuk pemilihan tanggal yang jauh dari tanggal sekarang-->
+				</tr>
+				<tr>
+					<td><label>JENIS KELAMIN</label></td>
+					<td>: <input type = "radio" name="kelamin" value="L"> Laki-Laki<!--type radio digunakan untuk input pemilihan dengan jumlah sedikit dan hanya bisa dipilih 1-->
+					<input type = "radio" name="kelamin" value="P"> Perempuan</td><!--value digunakan untuk menampilkan hasil dari pilihan user pada pemilik web-->
+				</tr>
+				<tr>
+					<td><label>HOBI</label></td>
+					<td>: <input type="checkbox" name="hobi" value="membaca"> Membaca<!--type checkbox digunakan untuk memilih beberapa pilihan-->
+					<input type="checkbox" name="hobi" value="olahraga"> Olahraga
+					<input type="checkbox" name="hobi" value="menulis"> Menulis</td>
+				</tr>
+				<tr>
+					<td><label>PAS FOTO</label></td>
+					<td>: <input type="file" name="foto" accept="image/jpg"></td><!--accept digunakan untuk menentukan default dari file yang akan dikirim user dan diterima pemilik web-->
+				</tr>
+				<tr>
+					<td><label>PRODI</label></td>
+					<td>: 
+						<select name="prodi" required>
+							<option value="">Pilih Prodi</option><!--option digukanan untuk membuat pilihan dengan opsi yang banyak-->
+							<option value="MI">Managemen Informatika</option>
+							<option value="TK">Teknik Komputer</option>
+							<option value="TRPL">Teknologi Rekayasa Perangkat Lunak</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label>ALAMAT LENGKAP</label></td>
+					<td>  
+						<textarea name="alamat" rows="5" cols="40"></textarea><!--textarea digukana untuk membuat ruang input dilanjutkan kebawah-->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+					<input type="submit" value="simpan">
+					<input type="reset" value="hapus">
+					</td>
+				</tr>
+			</table>
+			</fieldset>
+		</form>
 	</body>
 </html>
